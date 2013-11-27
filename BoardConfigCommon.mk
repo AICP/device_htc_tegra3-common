@@ -71,7 +71,6 @@ BOARD_EGL_CFG := device/htc/tegra3-common/configs/egl.cfg
 BOARD_HAVE_BLUETOOTH := true
 
 # USB
-BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 22
 BOARD_HAS_SDCARD_INTERNAL := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun0/file"
