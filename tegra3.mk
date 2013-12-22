@@ -130,7 +130,6 @@ PRODUCT_PACKAGES += \
 
 # Other apps
 PRODUCT_PACKAGES += \
-    Torch \
     com.android.future.usb.accessory
 
 # Video
