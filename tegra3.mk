@@ -112,13 +112,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     libtinyalsa \
-    libaudioutils
+    libaudioutils \
+    libcyanogen-dsp
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
-
 
 # NFC packages
 PRODUCT_PACKAGES += \
