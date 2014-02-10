@@ -90,6 +90,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/init.tegra3-common.rc:root/init.tegra3-common.rc
 
+# init.d
+PRODUCT_COPY_FILES += \
+    device/htc/tegra3-common/prebuilt/common/etc/init.d/51selinuxrelabel:system/etc/init.d/51selinuxrelabel
+
 # Lights
 PRODUCT_PACKAGES += \
     lights.tegra

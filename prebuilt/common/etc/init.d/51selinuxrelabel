@@ -1,0 +1,25 @@
+#!/system/bin/sh
+
+L="log -p i -t SELinuxLabel"
+
+# Bail out early if not on a SELinux build
+getprop ro.build.selinux | grep -q 1 || exit
+if [ ! -f /file_contexts ]; then
+  exit
+fi
+
+# Test xposed bridge
+ls -Zd /data/data/de.robv.android.xposed.installer | grep -q app_data
+if [ $? -eq 0 ]; then
+  $L "fixing XposedBridge..."
+  restorecon -R /data/data/de.robv.android.xposed.installer
+fi
+
+# Test for broken app_process
+ls -Zd /system/bin/app_process | grep -q zygote
+if [ $? -eq 1 ]; then
+  $L "fixing app_process..."
+  mount -o remount,rw /system
+  restorecon /system/bin/app_process
+  mount -o remount,ro /system
+fi
