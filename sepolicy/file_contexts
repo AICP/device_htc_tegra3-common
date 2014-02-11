@@ -26,3 +26,4 @@
 
 # Hardware tunables		
 /sys/class/graphics/fb0/device/smartdimmer/enable u:object_r:sysfs_writable:s0
+
