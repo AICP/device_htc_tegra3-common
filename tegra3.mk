@@ -149,5 +149,9 @@ PRODUCT_COPY_FILES += \
     device/htc/tegra3-common/configs/egl.cfg:system/lib/egl/egl.cfg
 
 
+# don't preload OpenGL in Zygote, the Tegra drivers do not like it
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.zygote.disable_gl_preload=true
+
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
