@@ -45,6 +45,12 @@ on boot
     chmod 0664 /sys/class/leds/button-backlight/button_brightness
     restorecon /sys/class/leds/button-backlight/button_brightness
 
+    # liblights
+    chown root system /sys/class/leds/button-backlight/brightness
+    chmod 0664 /sys/class/leds/button-backlight/brightness
+    chown root system /sys/class/leds/button-backlight/slow_blink
+    chmod 0664 /sys/class/leds/button-backlight/slow_blink
+
 # pollyd (respect & thanks to Adrian Ulrich <adrian@blinkenlights.ch> )
 service pollyd /system/bin/pollyd
     class late_start
