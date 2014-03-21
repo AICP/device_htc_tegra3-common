@@ -92,7 +92,6 @@ PRODUCT_COPY_FILES += \
 
 # init.d
 PRODUCT_COPY_FILES += \
-    device/htc/tegra3-common/prebuilt/common/etc/init.d/51selinuxrelabel:system/etc/init.d/51selinuxrelabel
 
 # Lights
 PRODUCT_PACKAGES += \
