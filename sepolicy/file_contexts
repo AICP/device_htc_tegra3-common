@@ -21,6 +21,9 @@
 
 # Hardware tunables
 /sys/class/graphics/fb0/device/smartdimmer/enable        u:object_r:sysfs_writable:s0
+/sys/class/leds/button-backlight/button_brightness     u:object_r:sysfs_writable:s0
+/sys/class/leds/button-backlight/slow_blink            u:object_r:sysfs_writable:s0
+/sys/class/timed_output/vibrator/dutycycle             u:object_r:sysfs_writable:s0
 
 # System binaries for the enrc2b
 /system/bin/glgps   u:object_r:gpsd_exec:s0
