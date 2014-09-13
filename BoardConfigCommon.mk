@@ -42,6 +42,7 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := false
+COMMON_GLOBAL_CFLAGS += -DARCH_CANNOT_OFFLOAD
 
 # Sense 4.5 / Sense 5 audio.primary blob support. See: include/hardware/audio.h
 BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
