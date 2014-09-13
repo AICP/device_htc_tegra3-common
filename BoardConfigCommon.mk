@@ -28,6 +28,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
 ARCH_ARM_USE_NON_NEON_MEMCPY := true
 TARGET_NO_RADIOIMAGE := true
+BOARD_USES_TEGRA := true
 
 # Optimization build flags
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
