@@ -2,3 +2,6 @@ allow system_app knv_device:chr_file rw_file_perms;
 
 # CMHW
 allow system_app sysfs_writable:file rw_file_perms;
+
+allow system_app doubletap2wake_dev:file rw_file_perms;
+allow system_app sweep2wake_dev:file rw_file_perms;
