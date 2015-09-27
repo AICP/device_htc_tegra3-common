@@ -46,8 +46,8 @@
 /sys/devices/virtual/bluetooth/hci0/rfkill0/type           --  u:object_r:sysfs_bluetooth_writable:s0
 
 # Hardware tunables
-/sys/devices/tegradc.0/smartdimmer/enable                u:object_r:sysfs_writable:s0
-/sys/devices/virtual/timed_output/vibrator/dutycycle     u:object_r:sysfs_writable:s0
+/sys/devices/tegradc.0/smartdimmer/enable                u:object_r:tap2wake_dev:s0
+/sys/devices/virtual/timed_output/vibrator/dutycycle     u:object_r:tap2wake_dev:s0
 /sys/android_touch/doubletap2wake                        u:object_r:tap2wake_dev:s0
 /sys/android_touch/sweep2wake                            u:object_r:tap2wake_dev:s0
 
@@ -87,5 +87,3 @@
 
 # NVM
 /dev/socket/nvm-ctl             u:object_r:nvm_socket:s0
-
-
